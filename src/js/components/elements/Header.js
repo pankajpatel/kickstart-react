@@ -7,8 +7,8 @@ export default class Header extends React.Component {
 
   render(){
     return (
-        <header class="header">
-          <div class="app-name">
+        <header className="header">
+          <div className="app-name">
             <h1>Kickstart React App</h1>
           </div>
           {this.props.children}

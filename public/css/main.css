@@ -367,3 +367,50 @@ textarea {
   /* 1 */
   font: inherit;
   /* 2 */ }
+
+header,
+.header {
+  display: block;
+  margin-bottom: 10px;
+  background-color: #ccc; }
+  header h1,
+  .header h1 {
+    margin: 0;
+    padding: 20px 0; }
+
+.list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.list img {
+  width: 100px;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0px;
+  margin: 10px 15px; }
+
+.list .list-item > p {
+  display: inline-block;
+  vertical-align: middle; }
+
+.grid {
+  clear: both;
+  padding: 0 10px; }
+  .grid:after, .grid:before {
+    display: block;
+    content: ''; }
+  .grid .grid-item {
+    width: 18.5%;
+    width: calc( 20% - 20px);
+    box-sizing: border-box;
+    float: left;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 4px; }
+    .grid .grid-item img {
+      display: block;
+      width: 100%;
+      border-radius: 3px; }

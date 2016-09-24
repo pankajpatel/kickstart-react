@@ -1,14 +1,30 @@
 var DashboardPlugin = require('webpack-dashboard/plugin');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var path = require('path');
+var config = require('./config');
+
+var preprocessorConfigs = {
+  scss: {
+    test: /.scss?$/,
+    loader: ExtractTextPlugin.extract('style', 'css!sass'),
+    exclude: /node_modules/
+  },
+  less: {
+    test: /.less?$/,
+    loader: ExtractTextPlugin.extract('style', 'css!less'),
+    exclude: /node_modules/
+  }
+}
+
 
 module.exports = {
   devtool: 'eval-source-map',
 
-  entry:  __dirname + "/src/js/index.js",
+  entry:  path.join(__dirname, config.srcDir , config.entry),
   output: {
-    path: __dirname + "/public",
-    filename: "js/bundle.js"
+    path: path.join(__dirname, config.outputDir),
+    filename: config.outputFile
   },
   resolveLoader: {
     root: '../node_modules',
@@ -23,15 +39,11 @@ module.exports = {
         query: {
           presets: ['es2015', 'react']
         }
-      },{
-        test: /.scss?$/,
-        loader: ExtractTextPlugin.extract('style', 'css!sass'),
-        exclude: /node_modules/
-      }
+      }, preprocessorConfigs[config.preprocessor]
     ]
   },
   devServer: {
-    contentBase: "./public",
+    contentBase: path.join(__dirname, config.outputDir),
     colors: true,
     historyApiFallback: true,
     inline: true
