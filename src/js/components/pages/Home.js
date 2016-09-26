@@ -1,34 +1,28 @@
 import React from 'react';
-import Header from '../elements/Header';
 import List from '../elements/List';
 
 export default class Home extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
-      value: '',
-      leftNavOpen: false
-    };
-
-      this.toggleLeftNav = this.toggleLeftNav.bind(this)
+      view: 'list'
+    }
   }
 
-  toggleLeftNav(){
-    console.log('fired', this.state.leftNavOpen)
-    this.setState({ leftNavOpen: !this.state.leftNavOpen })
+  changeView(){
+    if( this.state.view === 'list' ){
+      this.setState({view: 'grid'})
+    } else {
+      this.setState({view: 'list'})
+    }
   }
 
-  handleChange(event) {
-    this.setState({
-      value: event.target.value,
-    });
-  }
   render(){
     return (
         <div>
-          <Header leftNavHandler={this.toggleLeftNav} />
-          <List type="grid" />
+          <h2>List/Grid View</h2>
+          <button className="toggle-view pull-right" type="button" onClick={changeView}>Toggle</button>
+          <List type={this.state.view} />
         </div>
       );
   }
