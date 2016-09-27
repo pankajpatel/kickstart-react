@@ -1,7 +1,6 @@
 import React from 'react';
-import Header from '../elements/Header';
+import Header from './components/elements/Header';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-// import Header from './components/pages/Home';
 
 injectTapEventPlugin();
 

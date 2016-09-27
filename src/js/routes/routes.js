@@ -1,8 +1,8 @@
-import App from '../App.jsx';
-import Home from '../components/pages/Home.jsx';
-import Login from '../components/pages/Login.jsx';
-// import Logout from '../components/pages/Logout.jsx';
-import Register from '../components/pages/Register.jsx';
+import App from '../App';
+import Home from '../components/pages/Home';
+import Login from '../components/pages/Login';
+// import Logout from '../components/pages/Logout';
+import Register from '../components/pages/Register';
 
 function shouldBeLoggedIn(nextState, replace) {
   // const status = getLoginStatus();

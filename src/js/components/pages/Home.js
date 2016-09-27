@@ -7,6 +7,7 @@ export default class Home extends React.Component {
     this.state = {
       view: 'list'
     }
+    this.changeView = this.changeView.bind(this)
   }
 
   changeView(){
@@ -21,7 +22,7 @@ export default class Home extends React.Component {
     return (
         <div>
           <h2>List/Grid View</h2>
-          <button className="toggle-view pull-right" type="button" onClick={changeView}>Toggle</button>
+          <button className="toggle-view pull-right" type="button" onClick={this.changeView}>Toggle</button>
           <List type={this.state.view} />
         </div>
       );
