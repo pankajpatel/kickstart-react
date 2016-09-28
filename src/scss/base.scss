@@ -2,6 +2,7 @@
 @import "components/header.scss";
 @import "components/list-view.scss";
 @import "components/grid-view.scss";
+@import "components/forms.scss";
 
 * {
   box-sizing: border-box;
@@ -46,4 +47,8 @@
   @media (max-width: 650px){
     width: 100%;
   }
+}
+
+.centered{
+  text-align: center;
 }

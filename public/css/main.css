@@ -438,6 +438,16 @@ header,
       width: 100%;
       border-radius: 3px; }
 
+.form-block {
+  margin-bottom: 15px; }
+  .form-block .form-label {
+    min-width: 200px;
+    display: inline-block; }
+  .form-block .form-field {
+    display: inline-block;
+    padding: 5px;
+    font-size: 15px; }
+
 * {
   box-sizing: border-box; }
 
@@ -475,3 +485,6 @@ header,
   @media (max-width: 650px) {
     .container {
       width: 100%; } }
+
+.centered {
+  text-align: center; }
