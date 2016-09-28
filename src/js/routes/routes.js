@@ -1,11 +1,10 @@
 import App from '../App';
 import Home from '../components/pages/Home';
 import Login from '../components/pages/Login';
-// import Logout from '../components/pages/Logout';
 import Register from '../components/pages/Register';
 
 function shouldBeLoggedIn(nextState, replace) {
-  // const status = getLoginStatus();
+  // const status = getLoginStatus(); //From the State manager
   // if( status && !status.loggedin ){
   //   replace({
   //     pathname: '/login',

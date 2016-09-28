@@ -21,8 +21,8 @@ export default class Home extends React.Component {
   render(){
     return (
         <div>
-          <h2>List/Grid View</h2>
           <button className="toggle-view pull-right" type="button" onClick={this.changeView}>Toggle</button>
+          <h2>List/Grid View</h2>
           <List type={this.state.view} />
         </div>
       );

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 export default class Header extends React.Component {
   constructor(props) {
@@ -8,8 +9,13 @@ export default class Header extends React.Component {
   render(){
     return (
         <header className="header">
-          <div className="app-name">
+          <div className="container gutter app-name">
             <h1>Kickstart React App</h1>
+            <ul>
+              <li><Link to="/home" activeClassName='active' >Home</Link></li>
+              <li><Link to="/login" activeClassName='active' >Login</Link></li>
+              <li><Link to="/register" activeClassName='active' >Register</Link></li>
+            </ul>
           </div>
           {this.props.children}
         </header>

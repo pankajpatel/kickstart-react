@@ -9,7 +9,9 @@ export default class App extends React.Component {
     return (
         <div>
           <Header />
-          {this.props.children}
+          <div  className="container gutter">
+            {this.props.children}
+          </div>
         </div>
       );
   }

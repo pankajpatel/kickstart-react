@@ -54,13 +54,13 @@ export default class List extends React.Component {
   render() {
     if(this.props.type == 'grid'){
       return (
-          <div>
+          <div className="gutter-free clearfix">
             <GridView data={tilesData} />
           </div>
         )
     } else {
       return (
-          <div>
+          <div className="gutter-free clearfix">
             <ListView data={tilesData} />
           </div>
         )
