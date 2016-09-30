@@ -1,6 +1,7 @@
 import React from 'react';
 import Input from './Input';
 import Button from './Button';
+import Radio from './Radio';
 import Label from './Label';
 
 export default class FormBlock extends React.Component {
@@ -11,9 +12,12 @@ export default class FormBlock extends React.Component {
 
   getElement(){
     if(this.props.type == 'button' || this.props.type == 'submit'){
-      return <Button className="btn" type={this.props.type} text={this.props.text} >{this.props.text}</Button>;
+      return <Button className="btn" {...this.props} />;
+    } else if(this.props.type == 'radio') {
+      return <Radio className="form-field" {...this.props} />;
+
     } else {
-      return <Input className="form-field" type={this.props.type} />;
+      return <Input className="form-field" {...this.props} />;
     }
   }
 
