@@ -11,7 +11,7 @@ export default class List extends React.Component {
   }
 
   render() {
-    if(this.props.type == 'grid'){
+    if(this.props.type === 'grid'){
       return (
           <div className="gutter-free clearfix">
             <GridView data={tilesData} />
