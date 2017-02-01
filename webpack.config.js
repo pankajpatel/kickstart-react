@@ -27,8 +27,18 @@ module.exports = {
     filename: config.outputFile
   },
   resolveLoader: {
+    modules: [
+      'node_modules',
+      path.join(__dirname, '../node_modules'),
+    ],
     root: '../node_modules',
+    fallback: path.join(__dirname, '../node_modules'),
     moduleTemplates: ['*-loader']
+  },
+  resolve: {
+    alias: {
+      js: path.join(__dirname, config.srcDir , 'js')
+    }
   },
   module:{
     loaders: [
